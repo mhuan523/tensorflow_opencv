@@ -63,7 +63,14 @@ with tf.Session() as session:
     print('assign.eval():', assign.eval())
     print('tf.get_default_session.run(assign):', tf.get_default_session().run(assign))
 
+placeholder1 = tf.placeholder(tf.float32)
+placeholder2 = tf.placeholder(tf.float32)
+dataAdd = tf.add(placeholder1, placeholder2)
 
+with tf.Session() as session:
+    print(session.run(dataAdd, {placeholder1: 2, placeholder2: 4}))
+
+print('end!')
 
 
 
