@@ -13,7 +13,7 @@ mat4 = tf.constant([[1, 2, 3],
 
 with tf.Session() as session:
     print(session.run([mat1, mat2, mat3]))
-    print(mat1.shape, mat2.shape, mat3.shape)
+    print(mat1.shape, mat2.shape, mat3.shape)  #dimensions
     print(session.run(mat4[0]))
     print(session.run(mat4[:, 1]))
     print(session.run(mat4[2, 2]))
