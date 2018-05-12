@@ -3,7 +3,7 @@
 import numpy as np
 import cv2
 
-img = cv2.imread('../picture/mountain.jpg', 1)
+img = cv2.imread('../picture/opencv.jpg', 1)
 info = img.shape
 height = info[0]
 width = info[1]
