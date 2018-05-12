@@ -11,8 +11,8 @@ mode = info[2]
 cv2.imshow('src', img)
 
 
-matRotate = cv2.getRotationMatrix2D((height / 2, width / 2), 45, 0.4)
-dst = cv2.warpAffine(img, matRotate, (width, height))
+matRotate = cv2.getRotationMatrix2D((height / 2, width / 2), 45, 0.5)
+dst = cv2.warpAffine(img, matRotate, (height, width))
 
 cv2.imshow('dst', dst)
 cv2.waitKey(0)
