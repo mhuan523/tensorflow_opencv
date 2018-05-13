@@ -15,8 +15,13 @@ dst = np.zeros((height, width, 3), np.uint8)
 for i in range(height):
     for j in range(width):
         (b, g, r) = img[i, j]
-        gray = np.uint8((int(b) + int(g) + int(r)) / 3)
-        dst[i, j] = gray
+        #gray = np.uint8((int(b) + int(g) + int(r)) / 3)
+        b = int(b)
+        g = int(g)
+        r = int(r)
+        #gray = b * 0.299 + g * 0.587 + r * 0.114
+        gray = (b + (g << 1) + r) >> 2
+        dst[i, j] = np.uint8(gray)
 
 cv2.imshow('dst', dst)
 cv2.waitKey(0)
