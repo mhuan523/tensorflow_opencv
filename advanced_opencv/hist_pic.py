@@ -3,7 +3,6 @@
 import cv2
 import numpy as np
 
-
 def hist(image, type=None):
     color = (255, 255, 255)
     winName = 'gray'
