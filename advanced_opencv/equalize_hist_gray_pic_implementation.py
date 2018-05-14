@@ -27,7 +27,7 @@ for i in range(256):
 
 for i in range(height):
     for j in range(width):
-        dst[i, j] = 255 * count[gray[i, j]]
+        dst[i, j] = np.uint8(255 * count[gray[i, j]])
 
 cv2.imshow('src', gray)
 cv2.imshow('dst', dst)
