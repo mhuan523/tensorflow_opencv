@@ -41,14 +41,18 @@ for i in range(256):
     count_g[i] = sum_g
     count_r[i] = sum_r
 
+dst = np.zeros(info, np.uint8)
+
 for i in range(height):
     for j in range(width):
         (b, g, r) = img[i, j]
-        dst_b[i, j] = np.uint8(255 * count_b[b])
-        dst_g[i, j] = np.uint8(255 * count_g[g])
-        dst_r[i, j] = np.uint8(255 * count_r[r])
+        dst[i, j] = (255 * count_b[b], 255 * count_g[g], 255 * count_r[r])
+#         dst_b[i, j] = np.uint8(255 * count_b[b])
+#         dst_g[i, j] = np.uint8(255 * count_g[g])
+#         dst_r[i, j] = np.uint8(255 * count_r[r])
+#
+# dst = cv2.merge((dst_b, dst_g, dst_r))
 
-dst = cv2.merge((dst_b, dst_g, dst_r))
 
 cv2.imshow('src', img)
 cv2.imshow('dst', dst)
