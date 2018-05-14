@@ -1,4 +1,4 @@
-# implementation of equalizing hist of gray pic
+# implementation of hist of gray pic
 
 import cv2
 import numpy as np
