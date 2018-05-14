@@ -8,10 +8,6 @@ info = img.shape
 height = info[0]
 width = info[1]
 
-dst_b = np.zeros((height, width, 1), np.uint8)
-dst_g = np.zeros((height, width, 1), np.uint8)
-dst_r = np.zeros((height, width, 1), np.uint8)
-
 count_b = np.zeros(256, np.float32)
 count_g = np.zeros(256, np.float32)
 count_r = np.zeros(256, np.float32)
