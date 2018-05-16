@@ -7,7 +7,8 @@ info = img.shape
 
 size = (info[1], info[0])
 
-vedio_writer = cv2.VideoWriter('../vedio/2.mp4', -1, 15, size)
+fourcc = cv2.VideoWriter.fourcc('M', 'J', 'P', 'G')
+vedio_writer = cv2.VideoWriter('../vedio/2.mp4', fourcc, 15, size)
 
 for i in range(1, 11):
     file_name = 'image_' + str(i) + '.jpg'
